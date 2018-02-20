@@ -731,7 +731,7 @@ input::-moz-input-placeholder {
 
 /* Estilos Detalles */
 .sticky {
-    position: sticky; /* mas bien fixed */
+    position: sticky; /* mas bien fixed (no, q se sube) */
 }
 h4 {
     /* margin-top: 30px; */
