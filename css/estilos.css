@@ -138,6 +138,85 @@ header .burger {
 .menu div a:active {
     color: crimson;
 }
+/* ------------------------ Menú Hamburguesa "2" */
+.burger2 {
+    display: none;
+}
+.barra {
+    height: 4px;
+    width: 30px;
+    margin: 8px;
+    background-color: darkslateblue;
+}
+.arriba, .media, .abajo {
+    transition: all 700ms ease;
+}
+.burger2.abierto .arriba {
+    transform: translateY(12px) rotateZ(45deg);
+}
+.burger2.abierto .media {
+    width: 0;
+}
+.burger2.abierto .abajo {
+    transform: translateY(-12px) rotateZ(-45deg);
+}
+.menu2 {
+    position: absolute;
+    top: 105px;
+    left: 0;
+    width: 80%;
+    height: calc(100vh - 105px);
+    background-color: rgba(95, 118, 160, 0.95);
+    z-index: 10;
+    display: none;
+    box-shadow: 4px 0px 8px gray;    
+}
+.todo {
+    height: calc(100vh - 105px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+.enlaces {
+    display: flex;
+    flex-direction: column;
+}
+.menu2 a {
+    color: rgb(157, 220, 228);
+    padding: 10px 0 10px 25px;
+    width: 100%;
+    transform: translateX(-200px);
+    font-size: 20px;
+}
+.menu2 a:nth-child(1) {
+    transition: transform 500ms ease-in-out;
+}
+.menu2 a:nth-child(2) {
+    transition: transform 700ms ease-in-out;
+}
+.menu2 a:nth-child(3) {
+    transition: transform 900ms ease-in-out;
+}
+.menu2 a:nth-child(4) {
+    transition: transform 1100ms ease-in-out;
+}
+.menu2 a:nth-child(5) {
+    transition: transform 1300ms ease-in-out;
+}
+.menu2 a.aparicion {
+    transform: translateX(0px);
+}
+.menu2 .activo {
+    color: darkblue;
+}
+.menu2 a:hover {
+    color: white;
+    background-color: rgba(99, 179, 253, 0.7);
+}
+.menu2 a:active {
+    color: crimson;
+}
 
 /* SECCIÓN HERO */
 .hero {
@@ -850,6 +929,9 @@ input[type="radio"]:checked + .radio:before {
         display: none;
     }
     header .burger {
+        display: initial;
+    }
+    header .burger2 {
         display: initial;
     }
     .hero h1 {
