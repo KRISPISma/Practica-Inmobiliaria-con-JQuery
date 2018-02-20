@@ -483,6 +483,7 @@ input::-moz-input-placeholder {
     width: 300px;
     height: 400px;
     box-shadow: 2px 2px 4px cornflowerblue;
+    background-color: rgba(0, 255, 255, 0.5);
     /* margin:40px; */
 }
 .imagen {
@@ -606,7 +607,7 @@ input::-moz-input-placeholder {
 
 /* Estilos Detalles */
 .sticky {
-    position: sticky;
+    position: sticky; /* mas bien fixed */
 }
 h4 {
     /* margin-top: 30px; */
