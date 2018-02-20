@@ -65,19 +65,6 @@ header {
     height: 100px;
     padding: 20px;
 }
-header .burger {
-    display: none;
-    color: darkslateblue;
-    font-size: 36px;
-    text-indent: initial;
-}
-/* .normal .burger {
-    color: orange;
-} */
- /* normal {
-    box-shadow: 0 4px 8px gray;     Header del resto
-    position: initial;
-} */
 header nav ul {
     list-style: none;
     display: flex;
@@ -93,6 +80,64 @@ header nav ul li a:hover {color: dodgerblue;}
 .normal nav ul li a.activo {color: crimson;}
 .normal nav ul li a:hover {color: orangered;}
 .normal nav ul li a:active {color: lightcoral;} */
+
+/* ------------------------------ Menú Hamburguesa INICIO */
+header .burger {
+    display: none;
+    color: darkslateblue;
+    font-size: 36px;
+    text-indent: initial;
+    cursor: pointer;
+}
+.cerrar {
+    color: darkslateblue;
+    font-size: 40px;
+    padding: 20px;
+    text-indent: initial;  
+    cursor: pointer;  
+    /* background-color: rgba(222, 183, 135, 0.55);     */
+}
+/* .normal .burger {
+    color: orange;
+} */
+ /* normal {
+    box-shadow: 0 4px 8px gray;     Header del resto
+    position: initial;
+} */
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 80%;
+    height: 100vh;
+    background-color: rgba(222, 183, 135, 0.9);
+    display: none;
+    z-index: 10;
+    border-radius: 0 100px 100px 0;    
+}
+.menu div {
+    display: flex;
+    flex-direction: column;
+    /* padding-left: 20px; */
+}
+.menu div a {
+    color: darkslateblue;
+    padding: 10px;
+    padding-left: 25px;
+    font-size: 24px; 
+    width: 100%; /* a mi el hover me funcionaba sin esto... */
+    white-space: pre; /* para q no pegue saltos el texto al desplegarse el menu */
+}
+.menu div .activo {
+    color: darkblue;
+}
+.menu div a:hover {
+    color: dodgerblue;
+    background-color: rgb(231, 169, 93);
+}
+.menu div a:active {
+    color: crimson;
+}
 
 /* SECCIÓN HERO */
 .hero {
@@ -483,7 +528,7 @@ input::-moz-input-placeholder {
     width: 300px;
     height: 400px;
     box-shadow: 2px 2px 4px cornflowerblue;
-    background-color: rgba(0, 255, 255, 0.5);
+    background-color: rgba(201, 238, 238, 0.5);
     /* margin:40px; */
 }
 .imagen {
