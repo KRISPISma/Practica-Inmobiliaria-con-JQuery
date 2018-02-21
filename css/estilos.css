@@ -732,6 +732,7 @@ input::-moz-input-placeholder {
 }
 
 /* Estilos Detalles */
+/* -------------------------------------modal */
 .overlay {
     position: fixed;
     top: 0;
@@ -753,32 +754,39 @@ input::-moz-input-placeholder {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 300px;
+    width: 80%;
     transform: translate(-50%, -50%); /*para q lo centre bien*/
-    background-color: palegoldenrod;
+    background-color: lightblue;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
     visibility: hidden;
     opacity: 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     z-index: 21;
     transition: all 500ms ease;
 }
+.modal iframe {
+    padding: 10px;
+    box-shadow: 4px 4px 8px rgba(128, 128, 128, 0);    
+}
 .modal button {
     align-items: center;
+    margin: 10px;
+    width: 30%;
 }
-.modal hr {
+/* .modal hr {
     width: 100%;
-}
+} */
 .modal.visible {
     visibility: visible;
     opacity: 1;
 }
-.modal p:first-child {
+/* .modal p:first-child {
     font-size: 36px;
     color: #DF4215;
-}
+} */
+/* ----------------------------------------- */
 .sticky {
     position: sticky; /* mas bien fixed (no, q se sube) */
 }
