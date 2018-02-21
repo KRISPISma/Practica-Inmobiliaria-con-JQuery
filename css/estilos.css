@@ -115,7 +115,8 @@ header .burger {
     background-color: rgba(222, 183, 135, 0.9);
     display: none;
     z-index: 10;
-    border-radius: 0 100px 100px 0;    
+    border-radius: 0 100px 100px 0;   
+    overflow: hidden;      
 }
 .menu div {
     display: flex;
@@ -171,7 +172,8 @@ header .burger {
     background-color: rgba(95, 118, 160, 0.95);
     z-index: 10;
     display: none;
-    box-shadow: 4px 0px 8px gray;    
+    box-shadow: 4px 0px 8px gray;  
+    overflow: hidden;  
 }
 .todo {
     height: calc(100vh - 105px);
@@ -203,9 +205,9 @@ header .burger {
 .menu2 a:nth-child(4) {
     transition: transform 1100ms ease-in-out;
 }
-.menu2 a:nth-child(5) {
+/* .menu2 a:nth-child(5) {
     transition: transform 1300ms ease-in-out;
-}
+} */
 .menu2 a.aparicion {
     transform: translateX(0px);
 }
@@ -218,6 +220,10 @@ header .burger {
 }
 .menu2 a:active {
     color: crimson;
+}
+.menu2 p {
+    text-indent: 0;  
+    text-align: right;  
 }
 
 /* SECCIÓN HERO */
@@ -754,8 +760,9 @@ input::-moz-input-placeholder {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 80%;
     transform: translate(-50%, -50%); /*para q lo centre bien*/
+    width: 80%;
+    height: 80%;
     background-color: lightblue;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
     visibility: hidden;
@@ -925,8 +932,6 @@ input[type="radio"]:checked + .radio:before {
 /* --------------------------------------------------------- */
 /* --------------  Media Queries  --------------- */
 /* --------------------------------------------------------- */
-
-
 @media (min-width: 1400px) {
     .hero .fondo {background-attachment: fixed;}
     form {max-width: 1400px;}
@@ -975,6 +980,9 @@ input[type="radio"]:checked + .radio:before {
     }
     footer {
         font-size: 12px;
+    }
+    ul {
+        padding: 30px;
     }
 }
 @media (max-width: 620px) {
@@ -1057,7 +1065,10 @@ input[type="radio"]:checked + .radio:before {
     }
     .columna:hover img {
         transform: translateY(0px);   
-    }    
+    }  
+    .modal button {
+        width: 40%;
+    }      
 }
 @media (max-width: 480px) {
     .fila {
@@ -1082,6 +1093,10 @@ input[type="radio"]:checked + .radio:before {
     .izda, .centro, .dcha {
         padding: 10px 5px;
     }
+    .modal button {
+        width: 50%;
+        font-size: 20px;
+    }      
 }
 @media (max-width: 320px) {
     .columna .boton {
@@ -1090,8 +1105,11 @@ input[type="radio"]:checked + .radio:before {
         padding: 10px;
         border-radius: 14px;
     }
-    .listas ul, ul {
-        padding-left:10px;        
+    .listas ul {
+        padding:10px;        
+    }
+    .detalles {
+        text-align: left;
     }
     .newsletter {
         font-size: 26px;
