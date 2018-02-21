@@ -57,5 +57,4 @@ $(document).ready(function(){
     $(".close, .overlay").click(function(){
         $(".modal, .overlay").removeClass("visible");
     });
-
 });
